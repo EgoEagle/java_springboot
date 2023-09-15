@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>API Response</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    
+    <div>
+        <h2>Location</h2>
+        <!-- Parse the JSON string and access the "location.name" property -->
+        <p>Name: <span th:text="${#jsonUtils.parse(apiResponse).location.name}"></span></p>
+        <!-- Access other properties in a similar way -->
+    </div>
+    
+    <a th:href="@{/}" class="btn btn-primary">Home</a>
+</body>
+</html>
